@@ -1,11 +1,13 @@
 import faker from 'faker';
+import { Mapable } from './CustomMap';
 
-export class User {
+export class User implements Mapable {
   name: string;
   location: {
     lat: number;
     lng: number;
   };
+  color: string = 'black';
 
   constructor() {
     this.name = faker.name.findName();
